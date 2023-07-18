@@ -2,13 +2,12 @@
 html {
     scroll-behavior: smooth;
 
-    }
+}
 
-/* Reset default margin and padding */
-body, h1, h2, h3, p, ul, li {
+body, h1, h2, h3, {
     margin: 0;
     padding: 0;
-  }
+}
 
 
 .header {
@@ -25,14 +24,21 @@ body, h1, h2, h3, p, ul, li {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: inherit;
-    margin-bottom: ;
+    margin: auto;
     color: rgb(277,277,277);
+    height: fit-content;
+    max-width: 1000px;
 }
-  
-  
 
 .header-logo {
+    margin: 20px auto;
     
+}
+
+.header-container {
+    margin: auto;
+    height: fit-content;
+    padding: 0 20px;
 }
 
 .navbar-menu .nav {
@@ -44,51 +50,63 @@ body, h1, h2, h3, p, ul, li {
     margin-right: 10px;
     text-decoration: none;
     color: #ffffff;
-  }
+}
+
+.nav a:hover {
+    color: #ff6565;
+}
+.nav a:active {
+    color:#ff6565;
+}
+
+.btn {
+    background-color: #ff6565;
+    color: rgb(277,277,277);
+    border: none;
+    padding: 18px 32px;
+    border-radius: 25px;
+    margin-top: 25;
+    font-weight: bold;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
 
 
 /*SECTIONS*/
 
   .hero-section div {
     text-align: center;
-  }
+}
 
-  .what-we-do {
-    text-align: center; 
-  }
 
-  .results {
-    text-align: center;
-    display: block;
-    background-image: url('./images/headphones_hero_2.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: inherit;
-    color: rgb(277,277,277);
-    
 
-  }
+/*Media Queries*/
 
-  .contact {
-    text-align: center;
-  }
-
-  .footer {
-    background-color: rgb(2, 2, 47);
-  }
-
-  .footer-ul .socials {
+/* Large */
+.nav {
     display: flex;
-    margin-left: 200px;
-    gap: 20px;
-    color:#ffffff;
-    list-style: none;
-    text-decoration: none;
+    flex-flow: row wrap;
+    /* This aligns items to the end line on main-axis */
+    justify-content: flex-end;
   }
+  
+  /* Medium screens */
+  @media all and (max-width: 768px) {
+    .nav {
+      /* When on medium sized screens, we center it by evenly distributing empty space around items */
+      justify-content: space-around;
+      
+    }
 
-  .foot-r {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    
   }
+  
+  /* Small screens */
+  @media all and (max-width: 480px) {
+    .nav {
+      /* On small screens, we are no longer using row direction but column */
+      flex-direction: column;
+    }
+  }
+  
