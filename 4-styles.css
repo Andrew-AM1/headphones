@@ -132,6 +132,8 @@ body, h1, h2, h3, {
     background-position: inherit;
     color: rgb(277,277,277);
     padding: 30px;
+    margin: auto;
+    max-width: 1000px;
 
 }
 
@@ -143,7 +145,7 @@ body, h1, h2, h3, {
     padding-left: 200px;
     padding-right: 200px;
     padding-bottom: 20px;
-    
+    max-width: 1000px;
 }
 
 /* .results-img-link {
@@ -153,16 +155,21 @@ body, h1, h2, h3, {
 
 .contact {
     text-align: center;
-    padding: 30px;
+    padding: 50px;
+    padding-left: 200px;
+    padding-right: 200px;
+    max-width: 1000px;
 }
 
 .footer {
     background-color: rgb(2, 2, 47);
+    max-width: 1050px;
+    margin: auto;
 }
 
 .footer-ul .socials {
     display: flex;
-    margin-left: 200px;
+    margin-left: 100px;
     gap: 20px;
     color:#ffffff;
     list-style: none;
@@ -171,15 +178,14 @@ body, h1, h2, h3, {
 
 .foot-r {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 }
 
 .copyright {
     color: #ffffff;
     display: flex;
-    justify-content: flex-start;
-    flex-direction: column-reverse;
+    justify-content: center;
    
 }
 
